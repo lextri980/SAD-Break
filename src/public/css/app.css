@@ -1,0 +1,28 @@
+.login-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #a5e1ad; }
+
+.login-wrapper {
+  width: 30rem;
+  height: 20rem;
+  position: absolute;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 5px 5px 18px #888888; }
+
+.login-content {
+  margin: 1rem 6rem 1rem 6rem; }
+
+.login-wrapper header {
+  text-align: center;
+  font-size: 27px;
+  font-weight: 600; }
+
+.register-ask {
+  margin-bottom: 1rem; }
