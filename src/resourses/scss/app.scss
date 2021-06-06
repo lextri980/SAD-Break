@@ -1,3 +1,17 @@
-@import './login.scss';
-@import 'variables'
+@import 'variables';
+@import './auth.scss';
+@import './home';
+
+//header
+.navbar-item{
+    margin-right: 2rem;
+}
+
+.profile-dropdown{
+    margin-left: 5rem;
+}
+
+.course-list-table{
+    margin-top: 2rem;
+}
 

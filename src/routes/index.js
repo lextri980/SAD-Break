@@ -1,19 +1,16 @@
-const siteRouter = require('./site')
+const homeRouter = require('./home')
 const authenticationRouter = require('./authentication')
 const newsRouter = require('./news')
+const coursesRouter = require('./courses')
 
 
 function route(app) {
 
-    app.use('/', siteRouter)
-    app.use('/authentication', authenticationRouter)
+    app.use('/home', homeRouter)
+    app.use('/courses', coursesRouter)
     app.use('/news', newsRouter)
+    app.use('/', authenticationRouter)
 
     
-      
-      
-    //   app.get("/login", (req, res) => {
-    //     res.render('authentication/login', {layout: false});
-    //   });
 }
 module.exports = route;

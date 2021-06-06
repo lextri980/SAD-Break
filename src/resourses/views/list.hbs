@@ -1,0 +1,40 @@
+<div class="mt-4">
+  <h2 style="text-align: center;">Course list</h2>
+  <div class="row"><a href="/home">
+      <div class="create-button"><button
+          type="button"
+          class="btn btn-danger"
+          style="margin-right: 2rem;"
+        >Back</button></div></a>
+    <div class="create-button"><a href="/courses/create"><button
+          type="button"
+          class="btn btn-info"
+        >Create</button></a></div>
+    <table class="table course-list-table">
+      <thead>
+        <tr>
+          <th scope="col">No.</th>
+          <th scope="col">Name</th>
+          <th scope="col">Level</th>
+          <th scope="col">Create time</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each courses}}
+          <tr>
+            <th scope="row">{{sum @index 1}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.level}}</td>
+            <td>{{this.createdAt}}</td>
+            <td>
+              <button type="button" class="btn btn-link">Edit</button>
+              <button type="button" class="btn btn-link">Delete</button>
+            </td>
+          </tr>
+        {{/each}}
+
+      </tbody>
+    </table>
+  </div>
+</div>

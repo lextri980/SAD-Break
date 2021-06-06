@@ -1,16 +1,82 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" ><h1><span class="badge badge-secondary">TechEdu</span></h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand"><h1><span
+        class="badge badge-secondary"
+      >TechEdu</span></h1></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      
-    </ul>
-    
-  </div>
+  <div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+      </ul>
+
+      <ul class="navbar-nav ml-auto profile-dropdown">
+        {{!-- home --}}
+        <li class="nav-item active navbar-item">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
+        {{!-- news --}}
+        <li class="nav-item active navbar-item">
+          <a class="nav-link" href="/news">News</a>
+        </li>
+        {{!-- mark --}}
+        <li class="nav-item active navbar-item">
+          <a class="nav-link" href="#">Marks</a>
+        </li>
+        {{!-- subject --}}
+        <li class="nav-item active navbar-item">
+          <a class="nav-link" href="#">Subject</a>
+        </li>
+        {{!-- actor: teacher/student --}}
+        <li class="nav-item active dropdown navbar-item">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            People
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Student</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Teacher</a>
+          </div>
+        </li>
+        {{!-- profile --}}
+        <li class="nav-item active dropdown">
+          <a
+            class="nav-link dropdown-toggle profile-dropdown"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Profile
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">My Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/">Log out</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </div></div>
 </nav>
