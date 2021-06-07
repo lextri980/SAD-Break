@@ -15,45 +15,49 @@
   </head>
   <body>
 
-    {{! FORM LOGIN }}
+    {{! FORM REGISTER }}
 
-    <form method="POST" action="/authentication/store">
+    
       <div class="login-screen">
         <div class="login-wrapper">
 
-          <header>SIGNUP FORM</header>
+          <header>REGISTER</header>
 
           <div class="login-content">
+            <form method="POST" action="/signup/store">
             <!-- email -->
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+              <label for="username">Email address</label>
               <input
                 type="email"
                 class="form-control"
-                id="exampleInputEmail1"
+                id="username"
+                name="username"
                 placeholder="Enter email"
               />
             </div>
             <!-- password -->
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label for="password">Password</label>
               <input
                 type="password"
                 class="form-control"
-                id="exampleInputPassword1"
+                id="password"
+                name="password"
                 placeholder="Enter password"
               />
             </div>
             
             <!-- submit -->
             <div class="register-ask">
-              <span>You had an account? <a href="/">Login</a></span>
+              <span>You had an account? <a href="/login">Login</a></span>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
           </div>
         </div>
       </div>
-    </form>
+    
 
     {{! END FORM LOGIN }}
 

@@ -13,6 +13,7 @@ class HomeController {
             .catch(next)
     }
 
+    //GET /home/list
     list(req, res, next){
         Course.find({})
             .then(courses => res.render('list', {

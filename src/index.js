@@ -36,5 +36,5 @@ app.use(express.static(path.join(__dirname, "public")));
 route(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Example app listening at http://localhost:${port}/login`);
 });

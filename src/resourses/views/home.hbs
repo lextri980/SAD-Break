@@ -1,27 +1,37 @@
 <div class="mt-4">
+  <h2 style="text-align: center;">Home</h2>
+  <div class="wrapper">
+    <div class="create-button" style="float: left;"><a href="/home/list">
+        <button type="button" class="btn btn-success home-buttons">List style</button></a>
+    </div>
+    <div class="create-button"><a href="/courses/create"><button
+          type="button"
+          class="btn btn-info"
+        >Create</button></a></div>
 
-  <div class="create-button"><a href="/home/list">
-    <button type="button" class="btn btn-success home-buttons">List style</button></a>
-  </div>
+    <div class="row">
+      {{#each courses}}
+        <div class="col-sm-6 col-lg-3">
 
-  <div class="row">
-    {{#each courses}}
-      <div class="col-sm-6 col-lg-3">
+          <div class="card card-course-item">
 
-        <div class="card card-course-item">
+            <img
+              class="card-img-top"
+              src="{{this.image}}"
+              alt="Card image cap"
+            />
 
-          <img class="card-img-top" src="{{this.image}}" alt="Card image cap" />
+            <div class="card-body">
 
-          <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
 
-            <h5 class="card-title">{{this.name}}</h5>
-
-            <p class="card-text">{{this.description}}</p>
+              <p class="card-text">{{this.description}}</p>
+            </div>
+            <a href="/courses/{{this.slug}}" class="btn btn-primary">Let's study</a>
           </div>
-          <a href="/courses/{{this.slug}}" class="btn btn-primary">Let's study</a>
-        </div>
 
-      </div>
-    {{/each}}
+        </div>
+      {{/each}}
+    </div>
   </div>
 </div>

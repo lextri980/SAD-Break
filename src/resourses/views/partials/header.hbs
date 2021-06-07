@@ -21,23 +21,36 @@
       </ul>
 
       <ul class="navbar-nav ml-auto profile-dropdown">
-        {{!-- home --}}
-        <li class="nav-item active navbar-item">
-          <a class="nav-link" href="/home">Home</a>
+        {{! home }}
+        <li class="nav-item dropdown active navbar-item">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+          >
+            Home
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/home">Card</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/home/list">List</a>
+          </div>
         </li>
-        {{!-- news --}}
+        {{! news }}
         <li class="nav-item active navbar-item">
-          <a class="nav-link" href="/news">News</a>
+          <a class="nav-link" href="/announce">Announcement</a>
         </li>
-        {{!-- mark --}}
+        {{! mark }}
         <li class="nav-item active navbar-item">
           <a class="nav-link" href="#">Marks</a>
         </li>
-        {{!-- subject --}}
+        {{! subject }}
         <li class="nav-item active navbar-item">
           <a class="nav-link" href="#">Subject</a>
         </li>
-        {{!-- actor: teacher/student --}}
+        {{! actor: teacher/student }}
         <li class="nav-item active dropdown navbar-item">
           <a
             class="nav-link dropdown-toggle"
@@ -45,8 +58,6 @@
             id="navbarDropdown"
             role="button"
             data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
           >
             People
           </a>
@@ -56,7 +67,11 @@
             <a class="dropdown-item" href="#">Teacher</a>
           </div>
         </li>
-        {{!-- profile --}}
+        {{! account }}
+        <li class="nav-item active navbar-item">
+          <a class="nav-link" href="/account">Account</a>
+        </li>
+        {{! profile }}
         <li class="nav-item active dropdown">
           <a
             class="nav-link dropdown-toggle profile-dropdown"
@@ -72,7 +87,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">My Profile</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="/">Log out</a>
+            <a class="dropdown-item" href="/login">Log out</a>
           </div>
         </li>
 

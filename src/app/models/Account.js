@@ -6,4 +6,4 @@ const Account = new Schema({
     password: {type: String},
   });
 
-  module.exports = mongoose.model('account', Account)
+  module.exports = mongoose.model('accounts', Account)
