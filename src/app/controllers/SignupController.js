@@ -22,6 +22,7 @@ class SignupController {
         } else {
           account.save()
             .then(() => res.redirect("/login"))
+            
             .catch(next);
         }
       });

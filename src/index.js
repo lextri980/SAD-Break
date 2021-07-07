@@ -14,8 +14,8 @@ db.connect();
 app.use(morgan("combined"));
 
 //body-parser
-app.use (express.urlencoded())
-
+app.use(express.urlencoded());
+  
 //handlebars
 app.engine(
   "hbs",
