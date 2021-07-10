@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "60b84dcddb026d887bdd9b15"
+  },
+  "name": "NodeJs",
+  "description": "Backend - Nodejs is a JS runtime",
+  "image": "https://nordiccoder.com/app/uploads/2019/08/26-nodejs.png",
+  "slug": "nodejs",
+  "vidId": "TlB_eWDSMt4",
+  "level": "Difficult"
+},{
+  "_id": {
+    "$oid": "60b84e6ddb026d887bdd9b16"
+  },
+  "name": "JavaScript",
+  "description": "Full Stack",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtms-WnPy-Pku4_KY8Ulv49v03BXwunYbC4A&usqp=CAU",
+  "slug": "js",
+  "vidId": "W6NZfCO5SIk",
+  "level": "Intermediate to Difficult"
+},{
+  "_id": {
+    "$oid": "60b86087a4138e1ad8469f0e"
+  },
+  "name": "ReactJS",
+  "description": "Frontend - React is a library of JS",
+  "image": "https://miro.medium.com/max/2484/1*CeuWv9fCjD1uTiTuKytnBQ.png",
+  "slug": "reactjs",
+  "vidId": "Ke90Tje7VS0",
+  "level": "Easy to Difficult"
+},{
+  "_id": {
+    "$oid": "60b860f0a4138e1ad8469f0f"
+  },
+  "name": "PHP",
+  "description": "Full Stack - Library: Laravel",
+  "image": "https://vi.mrsea.dev/wp-content/uploads/sites/3/2020/03/ngon-ngu-lap-trinh-php.jpg",
+  "slug": "php",
+  "vidId": "OK_JCtrrv-c",
+  "level": "Easy"
+},{
+  "_id": {
+    "$oid": "60b86132a4138e1ad8469f10"
+  },
+  "name": "Swift",
+  "description": "IOS OP",
+  "image": "https://miro.medium.com/max/1838/1*4IWsNF0FGF9zhMuipgN5Tw.jpeg",
+  "slug": "swift",
+  "vidId": "Ulp1Kimblg0",
+  "level": "Intermediate"
+},{
+  "_id": {
+    "$oid": "60bc9c6c2b9ac222301d9032"
+  },
+  "name": "Python",
+  "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAC8CAMAAAC672BgAAAA51BMVEUfe7ohbK8jcrf7zAAod7D///9UlsdAfrk3iMAZebkfaq77yQAgcLdIh8MAc7b7yAAAbKr/78Pv9//v8/cAYqqnwNj/99Rhk8jc6vYZcq0cfrzS4/D///GQs9EAbrQAabRupM5jmMLH2+wncrFMjsKryOLh6vN9qMt2nsyivNn811EAZKsAXqj1+fv///kAY7N3m8W30OX+665UiLz94ov95pdXmMmCqctAhriQs9AyfbPB1OWErtOXvNywxd81fL370jj96adaj8b/+uD9333/7br82Fn83XH70zyas9MAXa/83Gj/+uaRle9VAAAO00lEQVR4nOWda0OiShjHvfSUIJEtlgpbqCnlKiVr11Wzy9mz2fb9P8+ZGdQEB4Th3nleiKCdc/id/zy3GcZcczdD1tn3bXverZYrcTkuI5bjCoJPKwh83qvxe7lSLjvGCQW/5hkFsmzB8I3iC8PgomWRLRgRCyNTMPx7DMEXi0zBiFoYWYIRuTCyBMO/Lr4sDDnqUJIlGNF7jAzB8C8Mv4MkQzBiEEZmYEQfSjIEw78uviwMplDivXbPFoxYPEZWYMSQY2QHRjzCyAQMBo/B4D0zAiMuYWQCRlzCyASMuISRBRgxhZJswCjEkYlnBEZ8wkg/DNk/i68Lg0EYXxdGjCxSD4NhdvXrwohTGGmHEafHSD2MWFmkHAZDVfJ1YcQrjHTD4IRoV+pkCkbMwkgzDDnWHCPlMGIXRpphxJtjpBxG7CxSDINBGKxNndTDiLOPkXYYLKEkqDDSC8O/LgKzSC2M2HOM1MKQWVriwVmkE0ZCwkgrDP8oQmARFIa8eFk9HoPO5OAsGFZwpQAGx4kilyvtNpvN6XTSbN525JyILwWzZIQRBAbikGtO25oOVpPqxrSDPmO3mBtcgWHI3Gmpq+F719pHJ3fnrdb9favVujvpGYqErupdmR",
+  "description": "Machine Learning",
+  "vidId": "oFgg7K2tpfk",
+  "level": "Easy",
+  "createdAt": {
+    "$date": "2021-06-06T09:59:08.814Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-06T09:59:08.814Z"
+  },
+  "slug": "python",
+  "__v": 0
+}]
