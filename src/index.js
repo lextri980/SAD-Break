@@ -5,7 +5,7 @@ const path = require("path");
 const route = require("./routes");
 const db = require("./database/connection");
 const app = express();
-const port = 5323;
+const port = 5001;
 
 //connect to db
 db.connect();
@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //routes init
 route(app);
 
+//app listen port
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}/login`);
 });
