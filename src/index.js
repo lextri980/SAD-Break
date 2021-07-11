@@ -27,7 +27,7 @@ app.engine(
   })
 );
 app.set("view engine", "hbs");
-app.set("views", path.join(__dirname, "resourses/views"));
+app.set("views", path.join(__dirname, "resources/views"));
 
 //static file
 app.use(express.static(path.join(__dirname, "public")));

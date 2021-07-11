@@ -1,6 +1,7 @@
 const Account = require("../models/Account");
 const { mulMongooseTO } = require("../../util/mongoose");
 const scripts = [{ script: "/js/account.js" }];
+// const scripts = [{ script: "/js/jquery-3.6.0.min.js" }];
 
 class AccountController {
   //GET /account
