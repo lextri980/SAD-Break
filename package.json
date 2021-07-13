@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon src/index.js",
-    "watch": "node-sass -w src/resourses/scss/ -o  src/public/css/",
+    "watch": "node-sass -w src/resources/scss/ -o  src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/lextri980/SAD_project#readme",
   "dependencies": {
+    "connect-flash": "^0.1.1",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.2",
+    "express-session": "^1.17.2",
     "mongoose": "^5.12.12",
     "mongoose-slug-generator": "^1.0.4",
     "passport": "^0.4.1",

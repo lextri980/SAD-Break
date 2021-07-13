@@ -1,9 +1,11 @@
 @import 'variables';
+
 .login-screen{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $blue1;
+    background-color: $blue1;
+    
 }
 
 .login-wrapper{
