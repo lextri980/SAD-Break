@@ -2,8 +2,10 @@ const express = require("express");
 const morgan = require("morgan");
 const handlebars = require("express-handlebars");
 const route = require("./routes");
-const flash = require('connect-flash')
-const session = require('express-session')
+const flash = require("connect-flash");
+const session = require("express-session");
+const passport = require('passport')
+const validator = require('express-validator')
 const path = require("path");
 const db = require("./database/connection");
 const app = express();
@@ -12,31 +14,34 @@ const port = process.env.PORT || 5001;
 //connect to db
 db.connect();
 
+//passport config
+require('./app/middlewares/Passport')(passport)
+
 //morgan
 app.use(morgan("combined"));
-
 //static file
 app.use(express.static(path.join(__dirname, "public")));
-
 //body-parser
 app.use(express.urlencoded());
-
 //express session
-app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true,
-}))
-
+app.use(
+  session({
+    secret: "secret",
+    resave: true,
+    saveUninitialized: true,
+  })
+);
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
 //connect flash
-app.use(flash())
-
+app.use(flash());
 //global vars
-app.use((req,res,next) => {
-  res.locals.success_msg = req.flash('success_msg')
-  res.locals.success_error = req.flash('error_msg')
-  next()
-})
+app.use((req, res, next) => {
+  res.locals.success_msg = req.flash("success_msg");
+  res.locals.success_error = req.flash("error_msg");
+  next();
+});
 
 //handlebars
 app.engine(
@@ -50,7 +55,6 @@ app.engine(
 );
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "resources/views"));
-
 
 //routes init
 route(app);

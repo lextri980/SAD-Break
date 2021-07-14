@@ -1,28 +1,20 @@
 const Account = require("../models/Account");
 const { mulMongooseTO } = require("../../util/mongoose");
+const passport = require('passport')
 
 class LoginController {
   //GET /login
-  login(req, res, next) {
+  login(req, res,next) {
     res.render("login", { layout: false });
   }
 
   //POST /login/store
   store(req, res, next) {
-    // const username = req.body.username
-    // const password = req.body.password
-    // Account.findOne({
-    //   username: username,
-    //   password: password
-    // })
-    // .then(data => {
-    //   if(data){
-    //     res.render('home')
-    //   } else {
-    //     res.send('This account has not been registered!!!')
-    //   }
-    // })
-    // .catch(next)
+    passport.authenticate('local', {
+      successRedirect: '/home',
+      failureRedirect: '/login',
+      failureFlash: true
+    }) (req, res, next)
   }
 }
 module.exports = new LoginController();

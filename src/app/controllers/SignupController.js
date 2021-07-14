@@ -1,16 +1,31 @@
 const Account = require("../models/Account");
 const { mulMongooseTO } = require("../../util/mongoose");
-const scripts = [{ script: "js/signup.js" }];
 
 class SignupController {
   //GET /signup
   signup(req, res, next) {
-    res.render("signup", { layout: false});
+    res.render("signup", { layout: false, seccess: req.session.success, errors: req.session.errors})
+    req.session.errors = null
   }
 
   //POST /signup/store
   store(req, res, next) {
     const { username, password } = req.body;
+    /*  check validator */
+    // check('username', 'invalid username').isLength({min:3})
+    // check('password', 'Passsword is invalid').isLength({min: 6})
+
+    // const errors = validationResult(req);
+    // if(errors){
+    //   req.session.errors = errors
+    //   req.session.success = false
+    //   res.redirect('/signup')
+    // } else {
+    //   req.session.success = true
+    //   res.json('successful')
+    // }
+    
+
     let errors = [];
 
     if (!username || !password) {
