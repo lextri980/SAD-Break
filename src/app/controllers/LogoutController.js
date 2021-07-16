@@ -1,6 +1,5 @@
-const Account = require("../models/Account");
-const { mulMongooseTO } = require("../../util/mongoose");
-const passport = require('passport')
+
+
 
 class LogoutController {
   logout(req,res,next) {
