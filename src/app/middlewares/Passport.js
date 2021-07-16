@@ -14,7 +14,7 @@ module.exports = function (passport) {
                 message: "That email is not registered",
               });
             }
-            if (!password) {
+            if (account.password != password) {
               return done(null, false, {
                 message: "That password is incorrect",
               });

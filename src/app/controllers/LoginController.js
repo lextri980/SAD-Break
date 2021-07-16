@@ -1,5 +1,3 @@
-const Account = require("../models/Account");
-const { mulMongooseTO } = require("../../util/mongoose");
 const passport = require('passport')
 
 class LoginController {
@@ -12,8 +10,7 @@ class LoginController {
   store(req, res, next) {
     passport.authenticate('local', {
       successRedirect: '/home',
-      failureRedirect: '/login',
-      failureFlash: true
+      failureRedirect: '/login'
     }) (req, res, next)
   }
 }

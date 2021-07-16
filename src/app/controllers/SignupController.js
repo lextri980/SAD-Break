@@ -29,10 +29,10 @@ class SignupController {
     let errors = [];
 
     if (!username || !password) {
-      errors.push({ msg: "plz fill in all fields" });
+      errors.push('error');
     }
     if (password.length < 6) {
-      errors.push({ msg: "Pw should be at least 6 characters" });
+      errors.push('error');
     }
     if (errors.length > 0) {
       res.render("signup", {
@@ -46,7 +46,7 @@ class SignupController {
       .then(account => {
         if(account) {
           //username exist
-          errors.push({msg: 'This username is already exist'})
+          errors.push('error')
           res.render("signup", {
             layout: false,
             errors,
@@ -57,7 +57,6 @@ class SignupController {
           const account = new Account(req.body)
           account.save()
             .then(account => {
-              req.flash('success_msg', 'You are now registered and can login')
               res.redirect('/login')
             })
             .catch(next)
