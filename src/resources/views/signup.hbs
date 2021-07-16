@@ -23,14 +23,14 @@
     {{! FORM REGISTER }}
 
     
-      <div class="login-screen">
-        <div class="login-wrapper">
+      <div class="signup-screen">
+        <div class="signup-wrapper">
 
           <header>REGISTER</header>
           
             
     
-          <div class="login-content">
+          <div class="signup-content">
             <form method="POST" action="/signup/store">
             <!-- email -->
             <div class="form-group">
@@ -43,6 +43,17 @@
                 placeholder="Enter email"
               />
             </div>
+            <!-- name -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="name"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter name"
+              />
+            </div>
             <!-- password -->
             <div class="form-group">
               <label for="password">Password</label>
@@ -52,6 +63,18 @@
                 id="password"
                 name="password"
                 placeholder="Enter password"
+              />
+            </div>
+            
+            <!-- confirm password -->
+            <div class="form-group">
+              <label for="password2">Confirm password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password2"
+                name="password2"
+                placeholder="Confirm password"
               />
             </div>
             
