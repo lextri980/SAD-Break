@@ -15,22 +15,9 @@ class SignupController {
   //POST /signup/store
   store(req, res, next) {
     const { username, name, password, password2 } = req.body;
-    /*  check validator */
-    // check('username', 'invalid username').isLength({min:3})
-    // check('password', 'Passsword is invalid').isLength({min: 6})
 
-    // const errors = validationResult(req);
-    // if(errors){
-    //   req.session.errors = errors
-    //   req.session.success = false
-    //   res.redirect('/signup')
-    // } else {
-    //   req.session.success = true
-    //   res.json('successful')
-    // }
-
+    /* Validator */
     let errors = [];
-
     if (!username || !name || !password || !password2) {
       errors.push("error");
     }
@@ -48,6 +35,7 @@ class SignupController {
         layout: false,
         errors,
         username,
+        name,
         password,
       });
     } else {
@@ -60,6 +48,7 @@ class SignupController {
               layout: false,
               errors,
               username,
+              name,
               password,
             });
           } else {

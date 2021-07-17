@@ -16,15 +16,15 @@
   <body>
 
     {{! FORM REGISTER }}
-
     
-      <div class="login-screen">
-        <div class="login-wrapper">
+    <div class="login-screen">
+<img src="../../public/image/bg.jpg" alt="bg">
+      <div class="login-wrapper">
 
-          <header>LOGIN</header>
+        <header>LOGIN</header>
 
-          <div class="login-content">
-            <form method="POST" action="/login/store">
+        <div class="login-content">
+          <form method="POST" action="/login/store">
             <!-- email -->
             <div class="form-group">
               <label for="username">Email address</label>
@@ -47,17 +47,17 @@
                 placeholder="Enter password"
               />
             </div>
-            
+
             <!-- submit -->
             <div class="register-ask">
-              <span>You do not have an account? <a href="/signup">Register</a></span>
+              <span>You do not have an account?
+                <a href="/signup">Register</a></span>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-          </div>
+          </form>
         </div>
       </div>
-    
+    </div>
 
     {{! END FORM LOGIN }}
 

@@ -1,5 +1,5 @@
 <div class="mt-4">
-  <h2 style="text-align: center;">ACCOUNT</h2>
+  <h2 style="text-align: center;">Account</h2>
   <div class="wrapper">
     <div class="create-button"><a href="#"><button
           type="button"
@@ -8,28 +8,41 @@
           data-target="#create-account"
         >Create</button></a></div>
     <br />
-    <table class="table table-striped">
-      <thead>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
         <tr>
           <th scope="col">No.</th>
+          <th scope="col">Code ID 
+            <a href="?_sort&column=cid&type=asc">
+              <span class="oi oi-elevator"></span>
+            </a>
+          </th>
           <th scope="col">Username</th>
           <th scope="col">Name</th>
           <th scope="col">Password</th>
           <th scope="col">Role</th>
-          <th scope="col"></th>
+          <th colspan="2"></th>
         </tr>
       </thead>
       <tbody>
         {{#each accounts}}
           <tr>
             <td scope="row">{{sum @index 1}}</td>
+            <td scope="row">{{this.cid}}</td>
             <td>{{this.username}}</td>
             <td>{{this.name}}</td>
             <td>{{this.password}}</td>
             <td>{{this.role}}</td>
             <td>
-              <button type="button" class="btn btn-link">Edit</button>
-              <button type="button" class="btn btn-link">Delete</button>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+              >Update</button></td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+              >Delete</button>
             </td>
           </tr>
         {{/each}}
@@ -64,12 +77,21 @@
         <form method="POST" action="/account/store">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" />
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+            />
           </div>
 
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" class="form-control" id="name" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="cid">Code ID</label>
+            <input type="text" class="form-control" name="cid" id="cid" />
           </div>
 
           <div class="form-group">
@@ -80,15 +102,22 @@
               id="password"
               name="password"
             />
-            
+            <div class="form-group">
+            <label for="password2">Confirm password</label>
+            <input
+              type="text"
+              class="form-control"
+              id="password2"
+              name="password2"
+            />
+
           </div>
           <button type="submit" class="btn btn-primary">Create</button>
         </form>
       </div>
-      
+
     </div>
   </div>
 </div>
 
-{{!-- PAGINATION --}}
-
+{{! PAGINATION }}

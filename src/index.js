@@ -20,7 +20,7 @@ require('./app/middlewares/Passport')(passport)
 //morgan
 app.use(morgan("combined"));
 //static file
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 //body-parser
 app.use(express.urlencoded());
 //express session

@@ -9,14 +9,14 @@
         >Create</button></a></div>
     <br />
 
-    <table class="table table-striped">
-      <thead>
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
         <tr>
           <th scope="col">No.</th>
           <th scope="col">Announcement</th>
           <th scope="col">Description</th>
           <th scope="col">Time</th>
-          <th scope="col"></th>
+          <th colspan=2></th>
         </tr>
       </thead>
       <tbody>
@@ -27,8 +27,15 @@
             <td>{{this.description}}</td>
             <td>{{this.createdAt}}</td>
             <td>
-              <button type="button" class="btn btn-link">Edit</button>
-              <button type="button" class="btn btn-link">Delete</button>
+              <button
+                type="button"
+                class="btn btn-outline-warning"
+              >Update</button></td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-outline-danger"
+              >Delete</button>
             </td>
           </tr>
         {{/each}}

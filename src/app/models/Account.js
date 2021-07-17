@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const Account = new Schema({
   username: { type: String},
+  cid: {type: String, default: 'S001'},
   name: { type: String},
   password: { type: String},
   role: {
